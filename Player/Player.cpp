@@ -28,11 +28,11 @@ void Player::takeDamage(int damage)
     }
     health -= trueDamage;
 
-    std::cout << name << " took " << trueDamage << " damage!" << endl;
+    std::cout << name << " tuvo " << trueDamage << " de daño" << endl;
 
     if (health <= 0)
     {
-        cout << name << " has been defeated!" << endl;
+        cout << name << " fue derrotado" << endl;
     }
 }
 
@@ -54,7 +54,7 @@ void Player::gainExperience(int exp)
 Character *Player::selectTarget(vector<Enemy *> possibleTargets)
 {
     int selectedTarget = 0;
-    cout << "Select a target: " << endl;
+    cout << "Selecciona un objetivo: " << endl;
     for (int i = 0; i < possibleTargets.size(); i++)
     {
         cout << i << ". " << possibleTargets[i]->getName() << endl;
